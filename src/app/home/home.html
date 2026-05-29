@@ -1,0 +1,12 @@
+<div class="home-container" [class.fade-out]="isFadingOut">
+  <div class="home-content">
+    <h1 class="home-title">Victor Citadin</h1>
+    <button class="saiba-mais-btn" (click)="onSaibaMaisClick($event)">
+      Saiba mais
+    </button>
+  </div>
+</div>
+
+<app-character-explosion *ngIf="isExploding" [startX]="startX" [startY]="startY"
+  (animationComplete)="onAnimationComplete()">
+</app-character-explosion>
